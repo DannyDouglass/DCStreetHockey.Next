@@ -1,3 +1,3 @@
 exports.index = function(req, res, next) {
-  res.render('index.html');
+  res.json('Welcome to the DCStreetHockey.Next API')
 };

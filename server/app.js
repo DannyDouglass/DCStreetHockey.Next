@@ -26,7 +26,7 @@ app.configure( function ()
   app.set('view engine', 'html');
 
   //set a custom html view template
-  app.engine('.html', require('ejs').renderFile);
+  //app.engine('.html', require('ejs').renderFile);
 
   //server config
   app.use(express.bodyParser());

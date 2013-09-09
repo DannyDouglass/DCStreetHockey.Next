@@ -27,14 +27,6 @@ module.exports = function (grunt) {
     grunt.initConfig({
         yeoman: yeomanConfig,
         watch: {
-            coffee: {
-                files: ['<%= yeoman.app %>/scripts/{,*/}*.coffee'],
-                tasks: ['coffee:dist']
-            },
-            coffeeTest: {
-                files: ['test/spec/{,*/}*.coffee'],
-                tasks: ['coffee:test']
-            },
             compass: {
                 files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
                 tasks: ['compass:server', 'autoprefixer']
@@ -68,7 +60,8 @@ module.exports = function (grunt) {
                         return [
                             lrSnippet,
                             mountFolder(connect, '.tmp'),
-                            mountFolder(connect, yeomanConfig.app)
+                            mountFolder(connect, yeomanConfig.app),
+                            require('./server/app')
                         ];
                     }
                 }
@@ -93,6 +86,13 @@ module.exports = function (grunt) {
                     }
                 }
             }
+            /*
+            server: {
+                options: {
+                    port: 9001,
+
+            }
+            */
         },
         open: {
             server: {
@@ -129,26 +129,6 @@ module.exports = function (grunt) {
                     run: true,
                     urls: ['http://localhost:<%= connect.options.port %>/index.html']
                 }
-            }
-        },
-        coffee: {
-            dist: {
-                files: [{
-                    expand: true,
-                    cwd: '<%= yeoman.app %>/scripts',
-                    src: '{,*/}*.coffee',
-                    dest: '.tmp/scripts',
-                    ext: '.js'
-                }]
-            },
-            test: {
-                files: [{
-                    expand: true,
-                    cwd: 'test/spec',
-                    src: '{,*/}*.coffee',
-                    dest: '.tmp/spec',
-                    ext: '.js'
-                }]
             }
         },
         compass: {
@@ -332,15 +312,18 @@ module.exports = function (grunt) {
         concurrent: {
             server: [
                 'compass',
-                'coffee:dist',
-                'copy:styles'
+                'copy:styles',
+                //'nodemon'
             ],
+            /*
+            nodemon: [
+                'nodemon'
+            ],
+            */
             test: [
-                'coffee',
                 'copy:styles'
             ],
             dist: [
-                'coffee',
                 'compass',
                 'copy:styles',
                 'imagemin',
@@ -355,6 +338,18 @@ module.exports = function (grunt) {
             all: {
                 rjsConfig: '<%= yeoman.app %>/scripts/main.js'
             }
+        },
+        nodemon: {
+          dev: {
+            options: {
+              file: 'server/app.js',
+              args: ['development'],
+              ignoredFiles: ['README.md', 'node_modules/**'],
+              watchedExtensions: ['js'],
+              delayTime: 1,
+              cwd: __dirname
+            }
+          }
         }
     });
 
@@ -366,6 +361,7 @@ module.exports = function (grunt) {
         grunt.task.run([
             'clean:server',
             'concurrent:server',
+            //'concurrent:nodemon',
             'autoprefixer',
             'connect:livereload',
             'open',
