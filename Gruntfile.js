@@ -312,14 +312,8 @@ module.exports = function (grunt) {
         concurrent: {
             server: [
                 'compass',
-                'copy:styles',
-                //'nodemon'
+                'copy:styles'
             ],
-            /*
-            nodemon: [
-                'nodemon'
-            ],
-            */
             test: [
                 'copy:styles'
             ],
@@ -361,7 +355,6 @@ module.exports = function (grunt) {
         grunt.task.run([
             'clean:server',
             'concurrent:server',
-            //'concurrent:nodemon',
             'autoprefixer',
             'connect:livereload',
             'open',
