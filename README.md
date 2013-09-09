@@ -10,20 +10,22 @@ Planned features will be tracked at the DCSH User Voice forum: https://dcstreeth
 
 Please vote to help prioritize the most important features!
 
-** Development Setup **
+##Development Setup
 
-Pre-Requisites: Node.js 0.10.*
+1. Install Node.js 0.10.*   
+   Note: Recommended to use Node Version Manager (nvm) to install Node.js: https://github.com/creationix/nvm
 
-1. Clone Repository
 2. Install global dependencies:
-  '''
-  npm install -g nodemon grunt-cli
-  '''
-3. Install local repository dependencies:
-  '''
+  
+  ```
+  npm install -g grunt-cli
+  ```
+3. Ins tall local repository dependencies:
+ 
+  ```
   npm install
-  '''
-4. Start the live reload and nodemon servers:
-  '''
+  ```
+4. Start the live reload servers (client: 9000, server api: 9001):
+  ```
   grunt server
-  '''
+  ```
