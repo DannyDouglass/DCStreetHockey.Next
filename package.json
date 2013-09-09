@@ -1,6 +1,15 @@
 {
-  "name": "webapp-require",
-  "version": "0.0.0",
+  "name": "DCStreetHockey.Next",
+  "author": {
+    "name": "Danny Douglass",
+    "url": "http://DannyDouglass.com",
+    "email": "ddouglass@gmail.com"
+  }
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dannydouglass/dcstreethockey.next.git"
+  },
   "dependencies": {
     "express-load": "~1.1.7"
   },
@@ -31,6 +40,9 @@
     "load-grunt-tasks": "~0.1.0",
     "connect-livereload": "~0.2.0",
     "time-grunt": "~0.1.1"
+  },
+  "peerDependencies": {
+    "yo": ">=1.0.0-rc.1"
   },
   "engines": {
     "node": ">=0.8.0"
