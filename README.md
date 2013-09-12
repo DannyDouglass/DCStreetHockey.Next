@@ -29,3 +29,6 @@ Please vote to help prioritize the most important features!
   ```
   grunt server
   ```
+
+##Deploy to Heroku
+git subtree push --prefix dist heroku master

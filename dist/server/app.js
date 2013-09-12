@@ -49,6 +49,6 @@ app.configure('production', function() {
 autoload('models').then('controllers').then('routes').into(app);
 
 // start server
-app.listen(app.get('port'));
+app.listen(process.env.PORT || app.get('port'));
 console.log('Express running in %s mode on port %s', app.get('env'), app.get('port'));
 
