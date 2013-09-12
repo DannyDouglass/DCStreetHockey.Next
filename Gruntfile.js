@@ -298,7 +298,7 @@ module.exports = function (grunt) {
                     dest: '<%= yeoman.dist %>',
                     src: [
                         'package.json',
-                        'procfile'
+                        'Procfile'
                     ]
                 }]
             },
