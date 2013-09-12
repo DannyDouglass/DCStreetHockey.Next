@@ -291,6 +291,17 @@ module.exports = function (grunt) {
                     ]
                 }]
             },
+            herokufiles: {
+                files: [{
+                    expand: true,
+                    cwd: '',
+                    dest: '<%= yeoman.dist %>',
+                    src: [
+                        'package.json',
+                        'procfile'
+                    ]
+                }]
+            },
             styles: {
                 expand: true,
                 dot: true,
@@ -381,6 +392,7 @@ module.exports = function (grunt) {
         'uglify',
         'modernizr',
         'copy:dist',
+        'copy:herokufiles',
         'rev',
         'usemin'
     ]);
