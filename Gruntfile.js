@@ -189,8 +189,8 @@ module.exports = function (grunt) {
                     // http://requirejs.org/docs/errors.html#sourcemapcomments
                     preserveLicenseComments: false,
                     useStrict: true,
-                    wrap: true
-                    //uglify2: {} // https://github.com/mishoo/UglifyJS2
+                    wrap: false,
+                    uglify2: {} // https://github.com/mishoo/UglifyJS2
                 }
             }
         },
@@ -320,7 +320,7 @@ module.exports = function (grunt) {
                 '<%= yeoman.distApp %>/styles/{,*/}*.css',
                 '!<%= yeoman.distApp %>/scripts/vendor/*'
             ],
-            uglify: true
+            uglify: false
         },
         concurrent: {
             server: [

@@ -44,5 +44,14 @@ require(['app'], function (App) {
     Dcsh.App = App;
     Dcsh.App.start();
 
+    Backbone.Collection.prototype.debugEvents =
+    Backbone.Model.prototype.debugEvents =
+    Backbone.View.prototype.debugEvents =
+    Backbone.Router.prototype.debugEvents = function() {
+        this.on('all', function(eventName) {
+            console.log('[debug event] --> ', eventName, Array.prototype.slice.call(arguments, 1))
+        })
+    }
+    
     return App;
 });
