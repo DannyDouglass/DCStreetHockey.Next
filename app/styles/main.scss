@@ -3,6 +3,7 @@ $images-path: "/images/";
 
 @import 'sass-bootstrap/lib/bootstrap';
 @import 'colors.scss';
+@import 'beta-message.scss';
 @import 'bootstrap-overrides.scss';
 
 .browsehappy {
