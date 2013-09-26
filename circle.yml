@@ -1,0 +1,5 @@
+deployment:
+  production:
+    branch: master
+    commands:
+      - git subtree push --prefix dist git@heroku.com:dcsh-mobile.git $CIRCLE_SHA1:master
