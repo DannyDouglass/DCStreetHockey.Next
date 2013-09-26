@@ -20,7 +20,7 @@ Please vote to help prioritize the most important features!
   ```
   npm install -g grunt-cli
   ```
-3. Ins tall local repository dependencies:
+3. Install local repository dependencies:
  
   ```
   npm install

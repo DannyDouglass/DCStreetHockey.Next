@@ -1,4 +1,4 @@
-define(['backbone', 'marionette', '../views/header', '../views/navigation', '../views/schedule', '../views/betaMessage', '../views/features'], 
+define(['backbone', 'marionette', '../views/header', '../views/navigation', '../views/schedule'], 
   function(Backbone, Marionette, HeaderView, NavigationView, ScheduleView, BetaMessageView, FeaturesView) {
     return Marionette.Controller.extend ({
 
@@ -7,15 +7,6 @@ define(['backbone', 'marionette', '../views/header', '../views/navigation', '../
         this.headerView = new HeaderView();
         this.navigationView = new NavigationView();
         this.scheduleView = new ScheduleView();
-        this.betaMessageView = new BetaMessageView();
-        this.featuresView = new FeaturesView();
-      },
-
-      showIndex: function(){
-        Dcsh.App.navigationRegion.show(this.navigationView);
-        Dcsh.App.headerRegion.show(this.headerView);
-        Dcsh.App.mainRegion.show(this.betaMessageView);
-        this.toggleActiveLink('#homeLink');
       },
 
       showSchedule: function(){
@@ -23,13 +14,6 @@ define(['backbone', 'marionette', '../views/header', '../views/navigation', '../
         Dcsh.App.headerRegion.show(this.headerView);
         Dcsh.App.mainRegion.show(this.scheduleView);
         this.toggleActiveLink('#scheduleLink');
-      },
-
-      showFeatures: function() {
-        Dcsh.App.navigationRegion.show(this.navigationView);
-        Dcsh.App.headerRegion.show(this.headerView);
-        Dcsh.App.mainRegion.show(this.featuresView);
-        this.toggleActiveLink('#featuresLink');
       },
 
       toggleActiveLink: function(activeLink) {
