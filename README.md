@@ -1,8 +1,9 @@
 DCStreetHockey.Next
 ===================
 
-New version of DCStreetHockey focused on mobile-first and the JavaScript stack.  
+[![Build Status](https://circleci.com/gh/DannyDouglass/DCStreetHockey.Next.png?circle-token=:circle-token)](https://circleci.com/gh/DannyDouglass/DCStreetHockey.Next)
 
+New version of DCStreetHockey focused on mobile-first and the JavaScript stack.  
 
 <img src="https://raw.github.com/DannyDouglass/DCStreetHockey.Next/master/app/images/preview.png" />
 
@@ -29,6 +30,3 @@ Please vote to help prioritize the most important features!
   ```
   grunt server
   ```
-
-##Deploy to Heroku
-git subtree push --prefix dist heroku master
