@@ -2,5 +2,4 @@ deployment:
   production:
     branch: master
     commands:
-      - grunt build
       - git subtree push --prefix dist git@heroku.com:dcsh-mobile.git master
