@@ -2,4 +2,4 @@ deployment:
   production:
     branch: master
     commands:
-      - git subtree push --prefix dist git@heroku.com:dcsh-mobile.git master 
+      - git subtree push --prefix dist git@heroku.com:dcsh-mobile.git master
