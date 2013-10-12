@@ -9,7 +9,7 @@ define(['backbone', 'marionette', 'controllers/controller'], function(Backbone, 
     },
 
     schedule: function() {
-      this.controller.showSchedule();
+      //this.controller.showSchedule();
     }
   });
 });

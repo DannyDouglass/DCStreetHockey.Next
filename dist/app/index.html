@@ -47,7 +47,7 @@
         
             <div class="container" id="container">
                 <p style="width: 100%; text-align: center; margin-top: 20px">
-                    <image src="images/loading_icon.gif" style="height: 50px">
+                    <image src="/images/loading_icon.gif" style="height: 50px">
                 </p>
             </div>
 
@@ -77,9 +77,11 @@
                      snapper.open('left');
             });
 
+            /* little flickering on phone w/ this event
             $('#primary-navigation li a').click(function(){
                 snapper.close();
             });
+            */
 
             /* Prevent Safari opening links when viewing as a Mobile App */
             (function (a, b, c) {
@@ -96,7 +98,7 @@
 
             var snapper = new Snap({
                 element: document.getElementById('content'),
-                transitionSpeed: 0.15,
+                transitionSpeed: 0.3,
             });
 
             //twitter button
