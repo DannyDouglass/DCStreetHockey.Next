@@ -3,8 +3,9 @@ $images-path: "/images/";
 
 @import 'sass-bootstrap/lib/bootstrap';
 @import 'colors.scss';
-@import 'beta-message.scss';
 @import 'bootstrap-overrides.scss';
+@import 'snap.scss';
+@import 'custom.scss';
 
 .browsehappy {
     margin: 0.2em 0 0 0;
