@@ -288,10 +288,21 @@ module.exports = function (grunt) {
                     src: [
                         '*.{ico,png,txt}',
                         '.htaccess',
-                        'images/{,*/}*.{webp,gif}',
                         'styles/fonts/{,*/}*.*'
                     ]
                 }]
+            },
+            otherImages: {
+                files: [{
+                    expand: true,
+                    dot: true,
+                    cwd: '<%= yeoman.app %>',
+                    dest: '<%= yeoman.distApp %>',
+                    src: [
+                        'images/{,*/}*.{webp,gif}'
+                    ]
+                }]
+            
             },
             herokufiles: {
                 files: [{
@@ -383,6 +394,7 @@ module.exports = function (grunt) {
         'uglify',
         'modernizr',
         'copy:dist',
+        'copy:otherImages',
         'copy:herokufiles',
         'rev',
         'usemin'

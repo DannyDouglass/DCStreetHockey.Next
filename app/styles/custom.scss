@@ -1,4 +1,4 @@
 #header { margin-top: 10px; }
-.twitter-follow-button { margin: 0 15px 25px 15px; }
+#loading { padding-top: 20px; height: 100px; width: 100%; background: url($images-path + 'loading-icon.gif') 50px center no-repeat; background-size: 50px; background-position: center; }
 
-#loading { padding-top: 20px; height: 100px; width: 100%; background: url($images-path + 'loading_icon.gif') 50px center no-repeat; background-size: 50px; background-position: center; }
+.twitter-follow-button { margin: 0 15px 25px 15px; }

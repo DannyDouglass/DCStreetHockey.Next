@@ -43,8 +43,6 @@ require.config({
 })
 require(['fb']);
 
-var Dcsh = {};
-
 require(['app'], function (App) {
     Dcsh.App = App;
     Dcsh.App.start();

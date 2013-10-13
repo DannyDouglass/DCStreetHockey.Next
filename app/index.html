@@ -39,8 +39,6 @@
         <nav id="navigation" class="navbar navbar-default navbar-static-top" role="navigation">
         </nav>
         -->
-
-        
         
         <div class="content snap-content" id="content">
             <div id="toolbar">
@@ -67,11 +65,15 @@
         <script src="bower_components/jquery/jquery.js"></script>
         <script src="bower_components/sass-bootstrap/dist/js/bootstrap.min.js"></script>
         <script src="vendor/snap.min.js"></script>
+        <script src="bower_components/fastclick/lib/fastclick.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
+            /* Define application namespace */
+            var Dcsh = {};
+
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
             function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
             e=o.createElement(i);r=o.getElementsByTagName(i)[0];
@@ -80,16 +82,10 @@
             ga('create','UA-XXXXX-X');ga('send','pageview');
 
             $('#open-left').click(function(){
-                 snapper.state().state == "left" ? 
-                     snapper.close() :
-                     snapper.open('left');
+                 Dcsh.MainNavigation.state().state == "left" ? 
+                     Dcsh.MainNavigation.close() :
+                     Dcsh.MainNavigation.open('left');
             });
-
-            /* little flickering on phone w/ this event
-            $('#primary-navigation li a').click(function(){
-                snapper.close();
-            });
-            */
 
             /* Prevent Safari opening links when viewing as a Mobile App */
             (function (a, b, c) {
@@ -104,12 +100,17 @@
                 }
             })(document, window.navigator, "standalone");
 
-            var snapper = new Snap({
+            Dcsh.MainNavigation = new Snap({
                 element: document.getElementById('content'),
                 transitionSpeed: 0.3,
+                disable: 'right'
             });
 
-            //twitter button
+            $(function() {
+                FastClick.attach(document.body);
+            });
+            
+            /* Twitter button in menu */
             !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
         </script>
 

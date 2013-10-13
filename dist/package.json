@@ -11,12 +11,13 @@
     "url": "https://github.com/dannydouglass/dcstreethockey.next.git"
   },
   "scripts": {
-    "test" : "grunt test"
+    "test": "grunt test"
   },
   "dependencies": {
     "express": "~3.4.0",
     "express-load": "~1.1.7",
-    "fbgraph": "~0.2.7"
+    "fbgraph": "~0.2.7",
+    "cors": "~2.0.0"
   },
   "devDependencies": {
     "grunt": "~0.4.1",

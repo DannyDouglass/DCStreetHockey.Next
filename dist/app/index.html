@@ -10,7 +10,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-        <link rel="stylesheet" href="styles/351b65e7.main.css">
+        <link rel="stylesheet" href="styles/89df59f9.main.css">
         <script src="scripts/vendor/f7f27360.modernizr.js"></script>
     </head>
     <body>
@@ -35,8 +35,6 @@
         <nav id="navigation" class="navbar navbar-default navbar-static-top" role="navigation">
         </nav>
         -->
-
-        
         
         <div class="content snap-content" id="content">
             <div id="toolbar">
@@ -58,10 +56,13 @@
         </div>
         
 
-        <script src="scripts/ea1eb02f.vendor.js"></script>
+        <script src="scripts/e0b03501.vendor.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
+            /* Define application namespace */
+            var Dcsh = {};
+
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
             function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
             e=o.createElement(i);r=o.getElementsByTagName(i)[0];
@@ -70,16 +71,10 @@
             ga('create','UA-XXXXX-X');ga('send','pageview');
 
             $('#open-left').click(function(){
-                 snapper.state().state == "left" ? 
-                     snapper.close() :
-                     snapper.open('left');
+                 Dcsh.MainNavigation.state().state == "left" ? 
+                     Dcsh.MainNavigation.close() :
+                     Dcsh.MainNavigation.open('left');
             });
-
-            /* little flickering on phone w/ this event
-            $('#primary-navigation li a').click(function(){
-                snapper.close();
-            });
-            */
 
             /* Prevent Safari opening links when viewing as a Mobile App */
             (function (a, b, c) {
@@ -94,15 +89,20 @@
                 }
             })(document, window.navigator, "standalone");
 
-            var snapper = new Snap({
+            Dcsh.MainNavigation = new Snap({
                 element: document.getElementById('content'),
                 transitionSpeed: 0.3,
+                disable: 'right'
             });
 
-            //twitter button
+            $(function() {
+                FastClick.attach(document.body);
+            });
+            
+            /* Twitter button in menu */
             !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
         </script>
 
-        <script data-main="scripts/a072f58a.main" src="bower_components/requirejs/require.js"></script>
+        <script data-main="scripts/c51b7505.main" src="bower_components/requirejs/require.js"></script>
 </body>
 </html>

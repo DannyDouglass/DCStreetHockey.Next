@@ -1,10 +1,12 @@
 /**
  * Load Dependencies
  */
-var express = require('express');
-var autoload = require('express-load');
-var path = require('path');
-var app = express();
+var express = require('express'),
+    autoload = require('express-load'),
+    path = require('path'),
+    app = express(),
+    cors = require('cors');
+
 process.chdir('server');
 
 // autoload config files
@@ -24,6 +26,7 @@ app.configure( function () {
   //app.engine('.html', require('ejs').renderFile);
 
   //server config
+  app.use(cors());
   app.use(express.bodyParser());
   app.use(express.methodOverride());
   app.use(app.router);

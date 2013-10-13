@@ -1,5 +1,18 @@
-define(['backbone', 'marionette', '../views/header', '../views/navigation', '../views/schedule'], 
-  function(Backbone, Marionette, HeaderView, NavigationView, ScheduleView, BetaMessageView, FeaturesView) {
+define([
+  'backbone', 
+  'marionette', 
+  '../views/header', 
+  '../views/navigation', 
+  '../views/schedule', 
+  '../collections/games'], 
+  function(
+    Backbone, 
+    Marionette, 
+    HeaderView, 
+    NavigationView, 
+    ScheduleView,
+    GamesCollection) {
+
     return Marionette.Controller.extend ({
 
       initialize: function(options){
@@ -10,6 +23,10 @@ define(['backbone', 'marionette', '../views/header', '../views/navigation', '../
       },
 
       showSchedule: function(){
+        //var games = new GamesCollection();
+        //games.fetch();
+
+        console.log(games);
         Dcsh.App.navigationRegion.show(this.navigationView);
         Dcsh.App.headerRegion.show(this.headerView);
         Dcsh.App.mainRegion.show(this.scheduleView);
