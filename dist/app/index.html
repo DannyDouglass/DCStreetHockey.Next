@@ -10,7 +10,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-        <link rel="stylesheet" href="styles/89df59f9.main.css">
+        <link rel="stylesheet" href="styles/89fd3080.main.css">
         <script src="scripts/vendor/f7f27360.modernizr.js"></script>
     </head>
     <body>
@@ -20,13 +20,11 @@
 
         <div class="snap-drawers">
             <div class="snap-drawer snap-drawer-left">
-                <h3> DCSH Mobile</h3>
+                <h3><span class="glyphicon glyphicon-phone"></span> DCSH Mobile</h3>
                 <a href="https://twitter.com/DCStreetHockey" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @DCStreetHockey</a>
-                
                 <br>
                 <ul id="primary-navigation">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/">Standings</a></li>
+                    <li><a href="/">Schedule</a></li>
                 </ul>
             </div>
         </div>
@@ -38,13 +36,17 @@
         
         <div class="content snap-content" id="content">
             <div id="toolbar">
-                <a href="#" id="open-left"></a>
+                <a href="#" id="open-left">
+                    <button id="snap-button" type="button" class="btn btn-default btn-default-override">
+                        <span class="glyphicon glyphicon-align-justify"></span>
+                    </button>
+                </a>
             </div>
 
             <header id="header" class="header"></header>
         
             <div class="container" id="container">
-                <p id="loading"></p>
+                <p class="loading"></p>
             </div>
 
             <div class="footer">
@@ -98,11 +100,11 @@
             $(function() {
                 FastClick.attach(document.body);
             });
-            
+
             /* Twitter button in menu */
             !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
         </script>
 
-        <script data-main="scripts/c51b7505.main" src="bower_components/requirejs/require.js"></script>
+        <script data-main="scripts/7a3b9711.main" src="bower_components/requirejs/require.js"></script>
 </body>
 </html>

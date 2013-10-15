@@ -1,6 +1,5 @@
-define(['facebook'], function(){
-
-  /*  
+/*define(['facebook'], function(){
+ 
   FB.init({
     appId      : 'APP_ID',
     channelUrl : '//localhost:9000/channel.html',
@@ -17,5 +16,5 @@ define(['facebook'], function(){
       });
     }
   }, { scope: 'manage_pages' });
-  */
 });
+*/

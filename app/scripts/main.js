@@ -15,7 +15,8 @@ require.config({
         bootstrapTooltip: '../bower_components/sass-bootstrap/js/tooltip',
         bootstrapTransition: '../bower_components/sass-bootstrap/js/transition',
         tpl: '../bower_components/requirejs-tpl/tpl',
-        'facebook': '//connect.facebook.net/en_US/all'
+        moment : '../bower_components/momentjs/min/moment.min'
+        //'facebook': '//connect.facebook.net/en_US/all'
     },
     shim: {
         'backbone': {
@@ -35,10 +36,8 @@ require.config({
         bootstrapScrollspy: { deps: ['jquery'] },
         bootstrapTab: { deps: ['jquery'] },
         bootstrapTooltip: { deps: ['jquery'] },
-        bootstrapTransition: { deps: ['jquery'] },
-        'facebook' : {
-            export: 'FB'
-        }
+        bootstrapTransition: { deps: ['jquery'] }
+        //'facebook' : { export: 'FB' }
     }
 })
 require(['fb']);
