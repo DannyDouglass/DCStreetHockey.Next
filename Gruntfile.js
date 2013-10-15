@@ -286,7 +286,6 @@ module.exports = function (grunt) {
                     cwd: '<%= yeoman.app %>',
                     dest: '<%= yeoman.dist %>',
                     src: [
-                        '*.{ico,png,txt}',
                         '.htaccess',
                         'styles/fonts/{,*/}*.*'
                     ]
@@ -299,6 +298,7 @@ module.exports = function (grunt) {
                     cwd: '<%= yeoman.app %>',
                     dest: '<%= yeoman.distApp %>',
                     src: [
+                        '*.{ico,png,txt}',
                         'images/{,*/}*.{webp,gif}',
                         'bower_components/sass-bootstrap/fonts{,*/}*.{eot,svg,ttf,woff}'
                     ]
