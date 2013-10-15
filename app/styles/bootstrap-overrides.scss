@@ -1,13 +1,15 @@
-/* maroon: #7b1220 */
+/*  */
 
 #schedule-navigation { margin-bottom: 20px; }
 
-.page-header { margin-top: 0px; }
-.navbar { margin-bottom: 0px; }
+.page-header { margin-top: 0; padding-bottom: 0; }
+.page-header .glyphicon { color: $maroon; }
+
+.navbar { margin-bottom: 0; }
 .navbar-nav { margin-top: 0; margin-bottom: 0; }
 
-.btn-default-override { color: #19223c; }
-.btn-default-override:hover { color: #19223c;  background-color: #fff; }
-.btn-default-override:active { color: #19223c; background-color: #fff; }
-.btn-default-override:focus { color: #19223c; background-color: #fff; }
-#snap-button .btn-default.active { color: #19223c; background-color: #fff; }
+.btn-default-override { color: $darkblue; }
+.btn-default-override:hover { color: $darkblue;  background-color: #fff; }
+.btn-default-override:active { color: $darkblue; background-color: #fff; }
+.btn-default-override:focus { color: $darkblue; background-color: #fff; }
+#snap-button .btn-default.active { color: $darkblue; background-color: #fff; }
