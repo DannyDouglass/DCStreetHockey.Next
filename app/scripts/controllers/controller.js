@@ -48,7 +48,7 @@ define([
           this.today.subtract('days', 4);
         }
         else {
-          this.determineDefaultDayToShow();
+          Dcsh.App.appRouter.navigate('/', { trigger: true });
         }
         
         var games = new GamesCollection();

@@ -299,7 +299,8 @@ module.exports = function (grunt) {
                     cwd: '<%= yeoman.app %>',
                     dest: '<%= yeoman.distApp %>',
                     src: [
-                        'images/{,*/}*.{webp,gif}'
+                        'images/{,*/}*.{webp,gif}',
+                        'bower_components/sass-bootstrap/fonts{,*/}*.{eot,svg,ttf,woff}'
                     ]
                 }]
             
