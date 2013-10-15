@@ -1,5 +1,5 @@
-define(['jquery', 'backbone', 'marionette', 'underscore', 'router', 'controllers/controller'],
-  function ($, Backbone, Marionette, _, AppRouter, AppController) {
+define(['jquery', 'backbone', 'marionette', 'underscore', 'router', 'controllers/controller', 'fastclick'],
+  function ($, Backbone, Marionette, _, AppRouter, AppController, FastClick) {
     var App = new Backbone.Marionette.Application();
 
     function isMobile() {
@@ -15,7 +15,11 @@ define(['jquery', 'backbone', 'marionette', 'underscore', 'router', 'controllers
 
     App.appRouter = new AppRouter();
     
-    App.on("initialize:after", function(options){
+    App.on('initialize', function(){
+        new FastClick(document.body);
+    });
+
+    App.on('initialize:after', function(options){
       if (Backbone.history)
         Backbone.history.start();
     });

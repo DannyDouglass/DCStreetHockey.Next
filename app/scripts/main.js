@@ -15,7 +15,8 @@ require.config({
         bootstrapTooltip: '../bower_components/sass-bootstrap/js/tooltip',
         bootstrapTransition: '../bower_components/sass-bootstrap/js/transition',
         tpl: '../bower_components/requirejs-tpl/tpl',
-        moment : '../bower_components/momentjs/min/moment.min'
+        moment : '../bower_components/momentjs/min/moment.min',
+        fastclick: '../bower_components/fastclick/lib/fastclick'
         //'facebook': '//connect.facebook.net/en_US/all'
     },
     shim: {
